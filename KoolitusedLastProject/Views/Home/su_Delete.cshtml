@@ -1,0 +1,60 @@
+﻿@model KoolitusedLastProject.Models.Sundmus
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Kustuta</title>
+</head>
+<body>
+    <h3>Kas olete kindel, et soovite selle kustutada?</h3>
+    <div>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                Тшьуегы
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Sundmusenimetus)
+            </dd>
+    
+            <dt>
+                Kirjeldus
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Sundmusekirjeldus)
+            </dd>
+    
+            <dt>
+                Õpetaja ID
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.OpetajaId)
+            </dd>
+    
+            <dt>
+                Ürituse päev
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Uritusepaev)
+            </dd>
+    
+        </dl>
+    
+        @using (Html.BeginForm()) {
+            @Html.AntiForgeryToken()
+    
+            <div class="form-actions no-color">
+                <input type="submit" value="Kustuta" class="btn btn-default" /> |
+                @Html.ActionLink("Tagasi nimekirja", "Sundmused")
+            </div>
+        }
+    </div>
+</body>
+</html>

@@ -11,5 +11,6 @@ namespace KoolitusedLastProject.Models
         public string LapseEesnimi { get; set; }
         public string LapsePerenimi { get; set; }
         public int Sunniaasta { get; set; }
+        public string User { get; set; }
     }
 }

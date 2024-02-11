@@ -175,5 +175,110 @@ namespace KoolitusedLastProject.Controllers
         }
         #endregion
 
+        #region Kursus
+        public ActionResult Kursused()
+        {
+            IEnumerable<Kursus> kursus = db.Kursus;
+            return View(kursus);
+        }
+        [HttpGet]
+        public ActionResult ku_Create()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult ku_Create(Kursus kursus)
+        {
+            db.Kursus.Add(kursus);
+            db.SaveChanges();
+            return RedirectToAction("Kursused");
+        }
+        [HttpGet]
+        public ActionResult ku_Delete(int id)
+        {
+            Kursus g = db.Kursus.Find(id);
+            if (g == null)
+                return HttpNotFound();
+            return View(g);
+        }
+        [HttpPost, ActionName("ku_Delete")]
+        public ActionResult ku_DeleteConfirmed(int id)
+        {
+            Kursus g = db.Kursus.Find(id);
+            if (g == null)
+                return HttpNotFound();
+            db.Kursus.Remove(g);
+            db.SaveChanges();
+            return RedirectToAction("Kursused");
+        }
+        [HttpGet]
+        public ActionResult ku_Edit(int? id)
+        {
+            Kursus g = db.Kursus.Find(id);
+            if (g == null)
+                return HttpNotFound();
+            return View(g);
+        }
+        [HttpPost, ActionName("ku_Edit")]
+        public ActionResult ku_EditConfirmed(Kursus kursus)
+        {
+            db.Entry(kursus).State = EntityState.Modified;
+            db.SaveChanges();
+            return RedirectToAction("Kursused");
+        }
+        #endregion
+
+        #region Sündmus
+        public ActionResult Sundmused()
+        {
+            IEnumerable<Sundmus> Sundmus = db.Sundmus;
+            return View(Sundmus);
+        }
+        [HttpGet]
+        public ActionResult su_Create()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult su_Create(Sundmus Sundmus)
+        {
+            db.Sundmus.Add(Sundmus);
+            db.SaveChanges();
+            return RedirectToAction("Sundmused");
+        }
+        [HttpGet]
+        public ActionResult su_Delete(int id)
+        {
+            Sundmus g = db.Sundmus.Find(id);
+            if (g == null)
+                return HttpNotFound();
+            return View(g);
+        }
+        [HttpPost, ActionName("su_Delete")]
+        public ActionResult su_DeleteConfirmed(int id)
+        {
+            Sundmus g = db.Sundmus.Find(id);
+            if (g == null)
+                return HttpNotFound();
+            db.Sundmus.Remove(g);
+            db.SaveChanges();
+            return RedirectToAction("Sundmused");
+        }
+        [HttpGet]
+        public ActionResult su_Edit(int? id)
+        {
+            Sundmus g = db.Sundmus.Find(id);
+            if (g == null)
+                return HttpNotFound();
+            return View(g);
+        }
+        [HttpPost, ActionName("su_Edit")]
+        public ActionResult su_EditConfirmed(Sundmus Sundmus)
+        {
+            db.Entry(Sundmus).State = EntityState.Modified;
+            db.SaveChanges();
+            return RedirectToAction("Sundmused");
+        }
+        #endregion
     }
 }

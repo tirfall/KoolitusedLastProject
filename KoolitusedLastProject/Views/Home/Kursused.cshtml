@@ -1,0 +1,56 @@
+﻿@model IEnumerable<KoolitusedLastProject.Models.Kursus>
+
+@{
+    ViewBag.Title = "Kursused";
+}
+
+<h2>Kursused</h2>
+
+<p>
+    @Html.ActionLink("Loo uus", "ku_Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Nimetus
+        </th>
+        <th>
+            Kirjeldus
+        </th>
+        <th>
+            Õpetaja ID
+        </th>
+        <th>
+            Hind
+        </th>
+        <th>
+            Maht
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Kursusenimetus)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Kursusekirjeldus)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OpetajaId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Kursusehind)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Kursusemaht)
+        </td>
+        <td>
+            @Html.ActionLink("Muuda", "ku_Edit", new { id=item.Id }) |
+            @Html.ActionLink("Kustuta", "ku_Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

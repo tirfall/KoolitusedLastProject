@@ -176,12 +176,14 @@
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Kursus.cs" />
     <Compile Include="Models\Koolitus.cs" />
     <Compile Include="Models\KoolitusContext.cs" />
     <Compile Include="Models\KoolitusDbInitializer.cs" />
     <Compile Include="Models\Laps.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Opetaja.cs" />
+    <Compile Include="Models\Sundmus.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -251,6 +253,14 @@
     <Content Include="Views\Home\o_Create.cshtml" />
     <Content Include="Views\Home\o_Delete.cshtml" />
     <Content Include="Views\Home\o_Edit.cshtml" />
+    <Content Include="Views\Home\Kursused.cshtml" />
+    <Content Include="Views\Home\ku_Create.cshtml" />
+    <Content Include="Views\Home\ku_Delete.cshtml" />
+    <Content Include="Views\Home\ku_Edit.cshtml" />
+    <Content Include="Views\Home\Sundmused.cshtml" />
+    <Content Include="Views\Home\su_Create.cshtml" />
+    <Content Include="Views\Home\su_Delete.cshtml" />
+    <Content Include="Views\Home\su_Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
