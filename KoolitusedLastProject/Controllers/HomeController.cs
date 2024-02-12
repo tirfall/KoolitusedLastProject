@@ -5,6 +5,8 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.UI.WebControls;
+using System.Xml.Linq;
 
 namespace KoolitusedLastProject.Controllers
 {
@@ -14,7 +16,7 @@ namespace KoolitusedLastProject.Controllers
         {
             return View();
         }
-        KoolitusContext db = new KoolitusContext();
+        readonly KoolitusContext db = new KoolitusContext();
 
         #region Koolitus
         public ActionResult Koolitused() 
@@ -179,11 +181,13 @@ namespace KoolitusedLastProject.Controllers
         public ActionResult Kursused()
         {
             IEnumerable<Kursus> kursus = db.Kursus;
+            ViewBag.Opetaja = db.Opetaja.ToList().ToDictionary(o => o.Id ,o => o.OpetajaEesnimi + " " + o.OpetajaPerenimi);
             return View(kursus);
         }
         [HttpGet]
         public ActionResult ku_Create()
         {
+            ViewBag.Opetaja = db.Opetaja;
             return View();
         }
         [HttpPost]

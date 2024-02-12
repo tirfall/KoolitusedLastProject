@@ -45,15 +45,6 @@
                     @Html.ValidationMessageFor(model => model.OpetajaId, "", new { @class = "text-danger" })
                 </div>
             </div>
-
-            <div class="form-group">
-                @Html.LabelFor(model => model.Kursusehind, labelText: "Hind", htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.Kursusehind, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.Kursusehind, "", new { @class = "text-danger" })
-                </div>
-            </div>
-
             <div class="form-group">
                 @Html.LabelFor(model => model.Kursusemaht, labelText: "Maht", htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
