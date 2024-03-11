@@ -21,15 +21,18 @@ namespace KoolitusedLastProject.Controllers
         #region Koolitus
         public ActionResult Koolitused() 
         {
-            IEnumerable<Koolitus> koolitus = db.Koolitus;
+            IEnumerable<Koolitus> koolitus = db.Koolitus.Include(k => k.Opetaja).ToList();
             return View(koolitus);
         }
         [HttpGet]
+        [Authorize(Roles = "Admin")]
         public ActionResult k_Create()
         {
+            ViewBag.OpetajaList = new SelectList(db.Opetaja.ToList(), "Id", "OpetajaPerenimi");
             return View();
         }
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public ActionResult k_Create(Koolitus koolitus)
         {
             db.Koolitus.Add(koolitus);
@@ -37,6 +40,7 @@ namespace KoolitusedLastProject.Controllers
             return RedirectToAction("Koolitused");
         }
         [HttpGet]
+        [Authorize(Roles = "Admin")]
         public ActionResult k_Delete(int id)
         {
             Koolitus g = db.Koolitus.Find(id);
@@ -55,14 +59,17 @@ namespace KoolitusedLastProject.Controllers
             return RedirectToAction("Koolitused");
         }
         [HttpGet]
+        [Authorize(Roles = "Admin")]
         public ActionResult k_Edit(int? id)
         {
             Koolitus g = db.Koolitus.Find(id);
             if (g == null)
                 return HttpNotFound();
+            ViewBag.OpetajaList = new SelectList(db.Opetaja.ToList(), "Id", "OpetajaPerenimi");
             return View(g);
         }
         [HttpPost,ActionName("k_Edit")]
+        [Authorize(Roles = "Admin")]
         public ActionResult k_EditConfirmed(Koolitus koolitus)
         {
             db.Entry(koolitus).State = EntityState.Modified;
@@ -72,17 +79,22 @@ namespace KoolitusedLastProject.Controllers
         #endregion
 
         #region Laps
+        [Authorize]
         public ActionResult Lapsed()
         {
-            IEnumerable<Laps> laps = db.Laps;
+            IEnumerable<Laps> laps = db.Laps.Include(k => k.Kursus).Include(k => k.Koolitus).Include(k => k.Sundmus).ToList();
             return View(laps);
         }
-        [HttpGet]
+        [Authorize]
         public ActionResult l_Create()
         {
+            ViewBag.KursusList = new SelectList(db.Kursus.ToList(), "Id", "Kursusenimetus");
+            ViewBag.KoolitusList = new SelectList(db.Koolitus.ToList(), "Id", "Koolitusenimetus");
+            ViewBag.SundmusList = new SelectList(db.Sundmus.ToList(), "Id", "Sundmusenimetus");
             return View();
         }
         [HttpPost]
+        [Authorize]
         public ActionResult l_Create(Laps laps)
         {
             db.Laps.Add(laps);
@@ -90,6 +102,7 @@ namespace KoolitusedLastProject.Controllers
             return RedirectToAction("Lapsed");
         }
         [HttpGet]
+        [Authorize]
         public ActionResult l_Delete(int id)
         {
             Laps g = db.Laps.Find(id);
@@ -98,6 +111,7 @@ namespace KoolitusedLastProject.Controllers
             return View(g);
         }
         [HttpPost, ActionName("l_Delete")]
+        [Authorize]
         public ActionResult l_DeleteConfirmed(int id)
         {
             Laps g = db.Laps.Find(id);
@@ -108,14 +122,19 @@ namespace KoolitusedLastProject.Controllers
             return RedirectToAction("Lapsed");
         }
         [HttpGet]
+        [Authorize]
         public ActionResult l_Edit(int? id)
         {
             Laps g = db.Laps.Find(id);
             if (g == null)
                 return HttpNotFound();
+            ViewBag.KursusList = new SelectList(db.Kursus.ToList(), "Id", "Kursusenimetus");
+            ViewBag.KoolitusList = new SelectList(db.Koolitus.ToList(), "Id", "Koolitusenimetus");
+            ViewBag.SundmusList = new SelectList(db.Sundmus.ToList(), "Id", "Sundmusenimetus");
             return View(g);
         }
         [HttpPost, ActionName("l_Edit")]
+        [Authorize]
         public ActionResult l_EditConfirmed(Laps laps)
         {
             db.Entry(laps).State = EntityState.Modified;
@@ -125,16 +144,19 @@ namespace KoolitusedLastProject.Controllers
         #endregion
 
         #region Opetaja
+        [Authorize(Roles = "Admin")]
         public ActionResult Opetajad()
         {
             IEnumerable<Opetaja> opetaja = db.Opetaja;
             return View(opetaja);
         }
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public ActionResult o_Create()
         {
             return View();
         }
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public ActionResult o_Create(Opetaja opetaja)
         {
@@ -143,6 +165,7 @@ namespace KoolitusedLastProject.Controllers
             return RedirectToAction("Opetajad");
         }
         [HttpGet]
+        [Authorize(Roles = "Admin")]
         public ActionResult o_Delete(int id)
         {
             Opetaja g = db.Opetaja.Find(id);
@@ -151,6 +174,7 @@ namespace KoolitusedLastProject.Controllers
             return View(g);
         }
         [HttpPost, ActionName("o_Delete")]
+        [Authorize(Roles = "Admin")]
         public ActionResult o_DeleteConfirmed(int id)
         {
             Opetaja g = db.Opetaja.Find(id);
@@ -161,6 +185,7 @@ namespace KoolitusedLastProject.Controllers
             return RedirectToAction("Opetajad");
         }
         [HttpGet]
+        [Authorize(Roles = "Admin")]
         public ActionResult o_Edit(int? id)
         {
             Opetaja g = db.Opetaja.Find(id);
@@ -169,6 +194,7 @@ namespace KoolitusedLastProject.Controllers
             return View(g);
         }
         [HttpPost, ActionName("o_Edit")]
+        [Authorize(Roles = "Admin")]
         public ActionResult o_EditConfirmed(Opetaja opetaja)
         {
             db.Entry(opetaja).State = EntityState.Modified;
@@ -180,17 +206,18 @@ namespace KoolitusedLastProject.Controllers
         #region Kursus
         public ActionResult Kursused()
         {
-            IEnumerable<Kursus> kursus = db.Kursus;
-            ViewBag.Opetaja = db.Opetaja.ToList().ToDictionary(o => o.Id ,o => o.OpetajaEesnimi + " " + o.OpetajaPerenimi);
+            IEnumerable<Kursus> kursus = db.Kursus.Include(k => k.Opetaja).ToList();
             return View(kursus);
         }
         [HttpGet]
+        [Authorize(Roles = "Admin")]
         public ActionResult ku_Create()
         {
-            ViewBag.Opetaja = db.Opetaja;
+            ViewBag.OpetajaList = new SelectList(db.Opetaja.ToList(), "Id", "OpetajaPerenimi");
             return View();
         }
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public ActionResult ku_Create(Kursus kursus)
         {
             db.Kursus.Add(kursus);
@@ -198,6 +225,7 @@ namespace KoolitusedLastProject.Controllers
             return RedirectToAction("Kursused");
         }
         [HttpGet]
+        [Authorize(Roles = "Admin")]
         public ActionResult ku_Delete(int id)
         {
             Kursus g = db.Kursus.Find(id);
@@ -206,6 +234,7 @@ namespace KoolitusedLastProject.Controllers
             return View(g);
         }
         [HttpPost, ActionName("ku_Delete")]
+        [Authorize(Roles = "Admin")]
         public ActionResult ku_DeleteConfirmed(int id)
         {
             Kursus g = db.Kursus.Find(id);
@@ -216,14 +245,17 @@ namespace KoolitusedLastProject.Controllers
             return RedirectToAction("Kursused");
         }
         [HttpGet]
+        [Authorize(Roles = "Admin")]
         public ActionResult ku_Edit(int? id)
         {
             Kursus g = db.Kursus.Find(id);
             if (g == null)
                 return HttpNotFound();
+            ViewBag.OpetajaList = new SelectList(db.Opetaja.ToList(), "Id", "OpetajaPerenimi");
             return View(g);
         }
         [HttpPost, ActionName("ku_Edit")]
+        [Authorize(Roles = "Admin")]
         public ActionResult ku_EditConfirmed(Kursus kursus)
         {
             db.Entry(kursus).State = EntityState.Modified;
@@ -235,15 +267,18 @@ namespace KoolitusedLastProject.Controllers
         #region Sündmus
         public ActionResult Sundmused()
         {
-            IEnumerable<Sundmus> Sundmus = db.Sundmus;
+            IEnumerable<Sundmus> Sundmus = db.Sundmus.Include(k => k.Opetaja).ToList();
             return View(Sundmus);
         }
         [HttpGet]
+        [Authorize]
         public ActionResult su_Create()
         {
+            ViewBag.OpetajaList = new SelectList(db.Opetaja.ToList(), "Id", "OpetajaPerenimi");
             return View();
         }
         [HttpPost]
+        [Authorize]
         public ActionResult su_Create(Sundmus Sundmus)
         {
             db.Sundmus.Add(Sundmus);
@@ -251,6 +286,7 @@ namespace KoolitusedLastProject.Controllers
             return RedirectToAction("Sundmused");
         }
         [HttpGet]
+        [Authorize]
         public ActionResult su_Delete(int id)
         {
             Sundmus g = db.Sundmus.Find(id);
@@ -259,6 +295,7 @@ namespace KoolitusedLastProject.Controllers
             return View(g);
         }
         [HttpPost, ActionName("su_Delete")]
+        [Authorize]
         public ActionResult su_DeleteConfirmed(int id)
         {
             Sundmus g = db.Sundmus.Find(id);
@@ -269,14 +306,17 @@ namespace KoolitusedLastProject.Controllers
             return RedirectToAction("Sundmused");
         }
         [HttpGet]
+        [Authorize]
         public ActionResult su_Edit(int? id)
         {
             Sundmus g = db.Sundmus.Find(id);
+            ViewBag.OpetajaList = new SelectList(db.Opetaja.ToList(), "Id", "OpetajaPerenimi");
             if (g == null)
                 return HttpNotFound();
             return View(g);
         }
         [HttpPost, ActionName("su_Edit")]
+        [Authorize]
         public ActionResult su_EditConfirmed(Sundmus Sundmus)
         {
             db.Entry(Sundmus).State = EntityState.Modified;

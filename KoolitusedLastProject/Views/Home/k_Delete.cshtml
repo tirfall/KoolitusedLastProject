@@ -27,11 +27,12 @@
         </dd>
 
         <dt>
-            Õpetaja ID
+            Õpetaja
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.OpetajaId)
+            @Html.DisplayFor(model => model.Opetaja.OpetajaEesnimi)
+            @Html.DisplayFor(model => model.Opetaja.OpetajaPerenimi)
         </dd>
 
         <dt>

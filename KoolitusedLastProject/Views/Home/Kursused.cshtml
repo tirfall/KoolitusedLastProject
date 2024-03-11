@@ -5,9 +5,13 @@
 
 <h2>Kursused</h2>
 
-<p>
-    @Html.ActionLink("Loo uus", "ku_Create")
-</p>
+
+@if (User.IsInRole("Admin"))
+{
+    <p>
+        @Html.ActionLink("Loo uus", "ku_Create")
+    </p>
+}
 <table class="table">
     <tr>
         <th>
@@ -17,13 +21,16 @@
             Kirjeldus
         </th>
         <th>
-            Õpetaja ID
+            Õpetaja
         </th>
         <th>
             Maht
         </th>
-        <th></th>
-    </tr>
+        @if (User.IsInRole("Admin"))
+        {
+            <th></th>
+        }
+        </tr>
     @foreach (var item in Model)
     {
         <tr>
@@ -34,16 +41,20 @@
                 @Html.DisplayFor(modelItem => item.Kursusekirjeldus)
             </td>
             <td>
-                @ViewBag.Opetaja[item.OpetajaId]
+                @(item.Opetaja.OpetajaEesnimi + " " + item.Opetaja.OpetajaPerenimi)
             </td>
             <td>
-                @item.Kursusemaht
+                @(item.Kursusemaht + " tundi")
             </td>
-            <td>
-                @Html.ActionLink("Muuda", "ku_Edit", new { id = item.Id }) |
-                @Html.ActionLink("Kustuta", "ku_Delete", new { id = item.Id })
-            </td>
-        </tr>
+
+            @if (User.IsInRole("Admin"))
+            {
+                <td>
+                    @Html.ActionLink("Muuda", "ku_Edit", new { id = item.Id }) |
+                    @Html.ActionLink("Kustuta", "ku_Delete", new { id = item.Id })
+                </td>
+            }
+            </tr>
     }
 
 </table>

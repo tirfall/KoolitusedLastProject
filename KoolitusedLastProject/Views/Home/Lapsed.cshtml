@@ -1,10 +1,11 @@
 ﻿@model IEnumerable<KoolitusedLastProject.Models.Laps>
-
+@using Microsoft.AspNet.Identity
 @{
     ViewBag.Title = "Lapsed";
 }
 
 <h2>Lapsed</h2>
+
 
 <p>
     @Html.ActionLink("Loo uus", "l_Create")
@@ -20,25 +21,89 @@
         <th>
             Sünniaasta
         </th>
+        <th>
+            Kursus
+        </th>
+        <th>
+            Kursuse hinne
+        </th>
+        <th>
+            Koolitus
+        </th>
+        <th>
+            Koolituse hinne
+        </th>
+        <th>
+            Sündmuse
+        </th>
+        <th>
+            Sündmuse üritusepäev
+        </th>
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.LapseEesnimi)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LapsePerenimi)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Sunniaasta)
-        </td>
-        <td>
-            @Html.ActionLink("Muuda", "l_Edit", new { id=item.Id }) |
-            @Html.ActionLink("Kustuta", "l_Delete", new { id=item.Id })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        if (!User.IsInRole("Admin") && item.User != User.Identity.GetUserName())
+        {
+            continue;
+        }
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.LapseEesnimi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LapsePerenimi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sunniaasta)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Kursus.Kursusenimetus)
+            </td>
+            <td>
+                @if (item.KursusHind == 0)
+                {
+                    <p>Hinnet pole määratud</p>
+                }
+                else
+                {
+                    @Html.DisplayFor(modelItem => item.KursusHind)
+                }
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Koolitus.Koolitusenimetus)
+            </td>
+            <td>
+                @if (item.KoolitusHind == 0)
+                {
+                    <p>Hinnet pole määratud</p>
+                }
+                else
+                {
+                    @Html.DisplayFor(modelItem => item.KoolitusHind)
+                }
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sundmus.Sundmusenimetus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sundmus.Uritusepaev)
+            </td>
+            @if (User.IsInRole("Admin"))
+            {
+                <td>
+                    @Html.ActionLink("Muuda", "l_Edit", new { id = item.Id }) |
+                    @Html.ActionLink("Kustuta", "l_Delete", new { id = item.Id })
+                </td>
+            }
+            else
+            {
+                <td>
+                    @Html.ActionLink("Kustuta", "l_Delete", new { id = item.Id })
+                </td>
+             }
+            </tr>
+    }
 
 </table>

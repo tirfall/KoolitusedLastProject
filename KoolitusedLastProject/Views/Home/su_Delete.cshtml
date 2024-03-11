@@ -16,35 +16,36 @@
             <dt>
                 Тшьуегы
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.Sundmusenimetus)
             </dd>
-    
+
             <dt>
                 Kirjeldus
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.Sundmusekirjeldus)
             </dd>
-    
+
             <dt>
-                Õpetaja ID
+                Õpetaja
             </dt>
-    
+
             <dd>
-                @Html.DisplayFor(model => model.OpetajaId)
+                @Html.DisplayFor(model => model.Opetaja.OpetajaEesnimi)
+                @Html.DisplayFor(model => model.Opetaja.OpetajaPerenimi)
             </dd>
-    
+
             <dt>
                 Ürituse päev
             </dt>
-    
+
             <dd>
                 @Html.DisplayFor(model => model.Uritusepaev)
             </dd>
-    
+
         </dl>
     
         @using (Html.BeginForm()) {

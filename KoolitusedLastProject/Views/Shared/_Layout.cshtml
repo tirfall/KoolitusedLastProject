@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNet.Identity
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -24,10 +25,16 @@
                     <li>@Html.ActionLink("Kodu", "Index", "Home")</li>
                     <li>@Html.ActionLink("Kursused", "Kursused", "Home")</li>
                     <li>@Html.ActionLink("Koolitused", "Koolitused", "Home")</li>
-                    <li>@Html.ActionLink("Opetajad", "Opetajad", "Home")</li>
-                    <li>@Html.ActionLink("Lapsed", "Lapsed", "Home")</li>
-                    <li>@Html.ActionLink("Sündmused", "Sundmused", "Home")</li>
-                </ul>
+                    @if (User.Identity.Name != string.Empty)
+                    {
+                        if (User.IsInRole("Admin"))
+                        {
+                            <li>@Html.ActionLink("Opetajad", "Opetajad", "Home")</li>
+                        }
+                        <li>@Html.ActionLink("Lapsed", "Lapsed", "Home")</li>
+                    }
+                        <li>@Html.ActionLink("Sündmused", "Sundmused", "Home")</li>
+                    </ul>
                 @Html.Partial("_LoginPartial")
             </div>
         </div>
