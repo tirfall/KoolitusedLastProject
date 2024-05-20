@@ -34,10 +34,10 @@
             Koolituse hinne
         </th>
         <th>
-            Sündmuse
+            Seminari
         </th>
         <th>
-            Sündmuse üritusepäev
+            Seminari üritusepäev
         </th>
         <th></th>
     </tr>
@@ -85,10 +85,10 @@
                 }
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Sundmus.Sundmusenimetus)
+                @Html.DisplayFor(modelItem => item.Seminar.Seminarinimetus)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Sundmus.Uritusepaev)
+                @Html.DisplayFor(modelItem => item.Seminar.Uritusepaev)
             </td>
             @if (User.IsInRole("Admin"))
             {

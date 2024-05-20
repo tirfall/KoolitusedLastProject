@@ -82,7 +82,7 @@ namespace KoolitusedLastProject.Controllers
         [Authorize]
         public ActionResult Lapsed()
         {
-            IEnumerable<Laps> laps = db.Laps.Include(k => k.Kursus).Include(k => k.Koolitus).Include(k => k.Sundmus).ToList();
+            IEnumerable<Laps> laps = db.Laps.Include(k => k.Kursus).Include(k => k.Koolitus).Include(k => k.Seminar).ToList();
             return View(laps);
         }
         [Authorize]
@@ -90,7 +90,7 @@ namespace KoolitusedLastProject.Controllers
         {
             ViewBag.KursusList = new SelectList(db.Kursus.ToList(), "Id", "Kursusenimetus");
             ViewBag.KoolitusList = new SelectList(db.Koolitus.ToList(), "Id", "Koolitusenimetus");
-            ViewBag.SundmusList = new SelectList(db.Sundmus.ToList(), "Id", "Sundmusenimetus");
+            ViewBag.SeminarList = new SelectList(db.Seminar.ToList(), "Id", "Seminarinimetus");
             return View();
         }
         [HttpPost]
@@ -130,7 +130,7 @@ namespace KoolitusedLastProject.Controllers
                 return HttpNotFound();
             ViewBag.KursusList = new SelectList(db.Kursus.ToList(), "Id", "Kursusenimetus");
             ViewBag.KoolitusList = new SelectList(db.Koolitus.ToList(), "Id", "Koolitusenimetus");
-            ViewBag.SundmusList = new SelectList(db.Sundmus.ToList(), "Id", "Sundmusenimetus");
+            ViewBag.SeminarList = new SelectList(db.Seminar.ToList(), "Id", "Seminarinimetus");
             return View(g);
         }
         [HttpPost, ActionName("l_Edit")]
@@ -264,11 +264,11 @@ namespace KoolitusedLastProject.Controllers
         }
         #endregion
 
-        #region Sündmus
-        public ActionResult Sundmused()
+        #region Seminar
+        public ActionResult Seminarid()
         {
-            IEnumerable<Sundmus> Sundmus = db.Sundmus.Include(k => k.Opetaja).ToList();
-            return View(Sundmus);
+            IEnumerable<Seminar> Seminar = db.Seminar.Include(k => k.Opetaja).ToList();
+            return View(Seminar);
         }
         [HttpGet]
         [Authorize]
@@ -279,17 +279,17 @@ namespace KoolitusedLastProject.Controllers
         }
         [HttpPost]
         [Authorize]
-        public ActionResult su_Create(Sundmus Sundmus)
+        public ActionResult su_Create(Seminar Seminar)
         {
-            db.Sundmus.Add(Sundmus);
+            db.Seminar.Add(Seminar);
             db.SaveChanges();
-            return RedirectToAction("Sundmused");
+            return RedirectToAction("Seminarid");
         }
         [HttpGet]
         [Authorize]
         public ActionResult su_Delete(int id)
         {
-            Sundmus g = db.Sundmus.Find(id);
+            Seminar g = db.Seminar.Find(id);
             if (g == null)
                 return HttpNotFound();
             return View(g);
@@ -298,18 +298,18 @@ namespace KoolitusedLastProject.Controllers
         [Authorize]
         public ActionResult su_DeleteConfirmed(int id)
         {
-            Sundmus g = db.Sundmus.Find(id);
+            Seminar g = db.Seminar.Find(id);
             if (g == null)
                 return HttpNotFound();
-            db.Sundmus.Remove(g);
+            db.Seminar.Remove(g);
             db.SaveChanges();
-            return RedirectToAction("Sundmused");
+            return RedirectToAction("Seminarid");
         }
         [HttpGet]
         [Authorize]
         public ActionResult su_Edit(int? id)
         {
-            Sundmus g = db.Sundmus.Find(id);
+            Seminar g = db.Seminar.Find(id);
             ViewBag.OpetajaList = new SelectList(db.Opetaja.ToList(), "Id", "OpetajaPerenimi");
             if (g == null)
                 return HttpNotFound();
@@ -317,11 +317,11 @@ namespace KoolitusedLastProject.Controllers
         }
         [HttpPost, ActionName("su_Edit")]
         [Authorize]
-        public ActionResult su_EditConfirmed(Sundmus Sundmus)
+        public ActionResult su_EditConfirmed(Seminar Seminar)
         {
-            db.Entry(Sundmus).State = EntityState.Modified;
+            db.Entry(Seminar).State = EntityState.Modified;
             db.SaveChanges();
-            return RedirectToAction("Sundmused");
+            return RedirectToAction("Seminarid");
         }
         #endregion
     }

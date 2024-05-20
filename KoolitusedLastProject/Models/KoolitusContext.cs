@@ -12,7 +12,7 @@ namespace KoolitusedLastProject.Models
         public DbSet<Laps> Laps { get; set; }
         public DbSet<Opetaja> Opetaja { get; set; }
         public DbSet<Kursus> Kursus { get; set; }
-        public DbSet<Sundmus> Sundmus { get; set; }
+        public DbSet<Seminar> Seminar { get; set; }
 
     }
 }

@@ -25,8 +25,8 @@ namespace KoolitusedLastProject.Models
         public int? KoolitusId { get; set; }
         public virtual Koolitus Koolitus { get; set; }
         public int KoolitusHind { get; set; }
-        [ForeignKey("Sundmus")]
-        public int? SundmusId { get; set; }
-        public virtual Sundmus Sundmus { get; set; }
+        [ForeignKey("Seminar")]
+        public int? SeminarId { get; set; }
+        public virtual Seminar Seminar { get; set; }
     }
 }

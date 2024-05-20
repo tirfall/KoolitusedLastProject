@@ -1,4 +1,4 @@
-﻿@model IEnumerable<KoolitusedLastProject.Models.Sundmus>
+﻿@model IEnumerable<KoolitusedLastProject.Models.Seminar>
 
 
 <!DOCTYPE html>
@@ -6,10 +6,10 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Sündmused</title>
+    <title>Seminarid</title>
 </head>
 <body>
-    <h2>Sündmused</h2>
+    <h2>Seminarid</h2>
 
     @if (User.IsInRole("Admin"))
     {
@@ -31,26 +31,32 @@
             <th>
                 Ürituse päev
             </th>
+            <th>
+                Koht/link
+            </th>
             @if (User.IsInRole("Admin"))
             {
                 <th></th>
             }
-            </tr>
+        </tr>
 
         @foreach (var item in Model)
         {
             <tr>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Sundmusenimetus)
+                    @Html.DisplayFor(modelItem => item.Seminarinimetus)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Sundmusekirjeldus)
+                    @Html.DisplayFor(modelItem => item.Seminarikirjeldus)
                 </td>
                 <td>
                     @(item.Opetaja.OpetajaEesnimi + " " + item.Opetaja.OpetajaPerenimi)
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Uritusepaev)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Koht)
                 </td>
 
                 @if (User.IsInRole("Admin"))
@@ -60,7 +66,7 @@
                         @Html.ActionLink("Kustuta", "su_Delete", new { id = item.Id })
                     </td>
                 }
-                </tr>
+            </tr>
         }
 
     </table>

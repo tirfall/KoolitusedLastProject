@@ -1,4 +1,4 @@
-﻿@model KoolitusedLastProject.Models.Sundmus
+﻿@model KoolitusedLastProject.Models.Seminar
 
 
 <!DOCTYPE html>
@@ -14,11 +14,11 @@
         <hr />
         <dl class="dl-horizontal">
             <dt>
-                Тшьуегы
+                Nimetus
             </dt>
 
             <dd>
-                @Html.DisplayFor(model => model.Sundmusenimetus)
+                @Html.DisplayFor(model => model.Seminarinimetus)
             </dd>
 
             <dt>
@@ -26,7 +26,7 @@
             </dt>
 
             <dd>
-                @Html.DisplayFor(model => model.Sundmusekirjeldus)
+                @Html.DisplayFor(model => model.Seminarikirjeldus)
             </dd>
 
             <dt>
@@ -45,6 +45,9 @@
             <dd>
                 @Html.DisplayFor(model => model.Uritusepaev)
             </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Koht)
+            </dd>
 
         </dl>
     
@@ -53,7 +56,7 @@
     
             <div class="form-actions no-color">
                 <input type="submit" value="Kustuta" class="btn btn-default" /> |
-                @Html.ActionLink("Tagasi nimekirja", "Sundmused")
+                @Html.ActionLink("Tagasi nimekirja", "Seminarid")
             </div>
         }
     </div>

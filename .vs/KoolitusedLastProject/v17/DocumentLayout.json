@@ -1,18 +1,42 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\aleks\\source\\repos\\KoolitusedLastProject\\",
+  "WorkspaceRootPath": "C:\\Users\\aleks\\source\\repos\\tirfall\\KoolitusedLastProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7D1F3AB3-CC37-4FC8-9926-5663024DBB64}|KoolitusedLastProject\\KoolitusedLastProject.csproj|c:\\users\\aleks\\source\\repos\\koolitusedlastproject\\koolitusedlastproject\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "AbsoluteMoniker": "D:0:0:{7D1F3AB3-CC37-4FC8-9926-5663024DBB64}|KoolitusedLastProject\\KoolitusedLastProject.csproj|c:\\users\\aleks\\source\\repos\\tirfall\\koolitusedlastproject\\koolitusedlastproject\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7D1F3AB3-CC37-4FC8-9926-5663024DBB64}|KoolitusedLastProject\\KoolitusedLastProject.csproj|solutionrelative:koolitusedlastproject\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D1F3AB3-CC37-4FC8-9926-5663024DBB64}|KoolitusedLastProject\\KoolitusedLastProject.csproj|C:\\Users\\aleks\\source\\repos\\tirfall\\KoolitusedLastProject\\koolitusedlastproject\\views\\home\\su_edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7D1F3AB3-CC37-4FC8-9926-5663024DBB64}|KoolitusedLastProject\\KoolitusedLastProject.csproj|solutionrelative:koolitusedlastproject\\views\\home\\su_edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D1F3AB3-CC37-4FC8-9926-5663024DBB64}|KoolitusedLastProject\\KoolitusedLastProject.csproj|C:\\Users\\aleks\\source\\repos\\tirfall\\KoolitusedLastProject\\koolitusedlastproject\\views\\home\\su_delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7D1F3AB3-CC37-4FC8-9926-5663024DBB64}|KoolitusedLastProject\\KoolitusedLastProject.csproj|solutionrelative:koolitusedlastproject\\views\\home\\su_delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D1F3AB3-CC37-4FC8-9926-5663024DBB64}|KoolitusedLastProject\\KoolitusedLastProject.csproj|C:\\Users\\aleks\\source\\repos\\tirfall\\KoolitusedLastProject\\koolitusedlastproject\\views\\home\\su_create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7D1F3AB3-CC37-4FC8-9926-5663024DBB64}|KoolitusedLastProject\\KoolitusedLastProject.csproj|solutionrelative:koolitusedlastproject\\views\\home\\su_create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D1F3AB3-CC37-4FC8-9926-5663024DBB64}|KoolitusedLastProject\\KoolitusedLastProject.csproj|C:\\Users\\aleks\\source\\repos\\tirfall\\KoolitusedLastProject\\koolitusedlastproject\\views\\home\\seminarid.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7D1F3AB3-CC37-4FC8-9926-5663024DBB64}|KoolitusedLastProject\\KoolitusedLastProject.csproj|solutionrelative:koolitusedlastproject\\views\\home\\seminarid.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D1F3AB3-CC37-4FC8-9926-5663024DBB64}|KoolitusedLastProject\\KoolitusedLastProject.csproj|C:\\Users\\aleks\\source\\repos\\tirfall\\KoolitusedLastProject\\koolitusedlastproject\\views\\home\\l_edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7D1F3AB3-CC37-4FC8-9926-5663024DBB64}|KoolitusedLastProject\\KoolitusedLastProject.csproj|solutionrelative:koolitusedlastproject\\views\\home\\l_edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D1F3AB3-CC37-4FC8-9926-5663024DBB64}|KoolitusedLastProject\\KoolitusedLastProject.csproj|C:\\Users\\aleks\\source\\repos\\tirfall\\KoolitusedLastProject\\koolitusedlastproject\\views\\home\\l_create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7D1F3AB3-CC37-4FC8-9926-5663024DBB64}|KoolitusedLastProject\\KoolitusedLastProject.csproj|solutionrelative:koolitusedlastproject\\views\\home\\l_create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D1F3AB3-CC37-4FC8-9926-5663024DBB64}|KoolitusedLastProject\\KoolitusedLastProject.csproj|C:\\Users\\aleks\\source\\repos\\tirfall\\KoolitusedLastProject\\koolitusedlastproject\\models\\laps.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D1F3AB3-CC37-4FC8-9926-5663024DBB64}|KoolitusedLastProject\\KoolitusedLastProject.csproj|solutionrelative:koolitusedlastproject\\models\\laps.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D1F3AB3-CC37-4FC8-9926-5663024DBB64}|KoolitusedLastProject\\KoolitusedLastProject.csproj|C:\\Users\\aleks\\source\\repos\\tirfall\\KoolitusedLastProject\\koolitusedlastproject\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{7D1F3AB3-CC37-4FC8-9926-5663024DBB64}|KoolitusedLastProject\\KoolitusedLastProject.csproj|solutionrelative:koolitusedlastproject\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D1F3AB3-CC37-4FC8-9926-5663024DBB64}|KoolitusedLastProject\\KoolitusedLastProject.csproj|C:\\Users\\aleks\\source\\repos\\KoolitusedLastProject\\koolitusedlastproject\\web.debug.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{7D1F3AB3-CC37-4FC8-9926-5663024DBB64}|KoolitusedLastProject\\KoolitusedLastProject.csproj|solutionrelative:koolitusedlastproject\\web.debug.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D1F3AB3-CC37-4FC8-9926-5663024DBB64}|KoolitusedLastProject\\KoolitusedLastProject.csproj|C:\\Users\\aleks\\source\\repos\\KoolitusedLastProject\\koolitusedlastproject\\web.release.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{7D1F3AB3-CC37-4FC8-9926-5663024DBB64}|KoolitusedLastProject\\KoolitusedLastProject.csproj|solutionrelative:koolitusedlastproject\\web.release.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,8 +46,22 @@
       "DocumentGroups": [
         {
           "DockedWidth": 470,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 8,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Web.config",
+              "DocumentMoniker": "C:\\Users\\aleks\\source\\repos\\tirfall\\KoolitusedLastProject\\KoolitusedLastProject\\Web.config",
+              "RelativeDocumentMoniker": "KoolitusedLastProject\\Web.config",
+              "ToolTip": "C:\\Users\\aleks\\source\\repos\\tirfall\\KoolitusedLastProject\\KoolitusedLastProject\\Web.config",
+              "RelativeToolTip": "KoolitusedLastProject\\Web.config",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAADBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-05-20T00:45:49.174Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{fbcae063-e2c0-4ab1-a516-996ea3dafb72}"
@@ -54,40 +92,100 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\aleks\\source\\repos\\tirfall\\KoolitusedLastProject\\KoolitusedLastProject\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "KoolitusedLastProject\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\aleks\\source\\repos\\tirfall\\KoolitusedLastProject\\KoolitusedLastProject\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "KoolitusedLastProject\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAACkAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-20T22:38:32.68Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Web.Debug.config",
-              "DocumentMoniker": "C:\\Users\\aleks\\source\\repos\\KoolitusedLastProject\\KoolitusedLastProject\\Web.Debug.config",
-              "RelativeDocumentMoniker": "KoolitusedLastProject\\Web.Debug.config",
-              "ToolTip": "C:\\Users\\aleks\\source\\repos\\KoolitusedLastProject\\KoolitusedLastProject\\Web.Debug.config",
-              "RelativeToolTip": "KoolitusedLastProject\\Web.Debug.config",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2024-05-20T00:47:06.875Z"
+              "Title": "su_Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\aleks\\source\\repos\\tirfall\\KoolitusedLastProject\\KoolitusedLastProject\\Views\\Home\\su_Edit.cshtml",
+              "RelativeDocumentMoniker": "KoolitusedLastProject\\Views\\Home\\su_Edit.cshtml",
+              "ToolTip": "C:\\Users\\aleks\\source\\repos\\tirfall\\KoolitusedLastProject\\KoolitusedLastProject\\Views\\Home\\su_Edit.cshtml",
+              "RelativeToolTip": "KoolitusedLastProject\\Views\\Home\\su_Edit.cshtml",
+              "ViewState": "AQIAAEgAAAAAAAAAAAAAAEgAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-20T22:38:30.838Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Web.Release.config",
-              "DocumentMoniker": "C:\\Users\\aleks\\source\\repos\\KoolitusedLastProject\\KoolitusedLastProject\\Web.Release.config",
-              "RelativeDocumentMoniker": "KoolitusedLastProject\\Web.Release.config",
-              "ToolTip": "C:\\Users\\aleks\\source\\repos\\KoolitusedLastProject\\KoolitusedLastProject\\Web.Release.config",
-              "RelativeToolTip": "KoolitusedLastProject\\Web.Release.config",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2024-05-20T00:47:05.478Z"
+              "Title": "su_Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\aleks\\source\\repos\\tirfall\\KoolitusedLastProject\\KoolitusedLastProject\\Views\\Home\\su_Delete.cshtml",
+              "RelativeDocumentMoniker": "KoolitusedLastProject\\Views\\Home\\su_Delete.cshtml",
+              "ToolTip": "C:\\Users\\aleks\\source\\repos\\tirfall\\KoolitusedLastProject\\KoolitusedLastProject\\Views\\Home\\su_Delete.cshtml",
+              "RelativeToolTip": "KoolitusedLastProject\\Views\\Home\\su_Delete.cshtml",
+              "ViewState": "AQIAADoAAAAAAAAAAAAAADoAAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-20T22:38:28.127Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Web.config",
-              "DocumentMoniker": "C:\\Users\\aleks\\source\\repos\\KoolitusedLastProject\\KoolitusedLastProject\\Web.config",
-              "RelativeDocumentMoniker": "KoolitusedLastProject\\Web.config",
-              "ToolTip": "C:\\Users\\aleks\\source\\repos\\KoolitusedLastProject\\KoolitusedLastProject\\Web.config",
-              "RelativeToolTip": "KoolitusedLastProject\\Web.config",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAATAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2024-05-20T00:45:49.174Z",
-              "EditorCaption": ""
+              "DocumentIndex": 3,
+              "Title": "su_Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\aleks\\source\\repos\\tirfall\\KoolitusedLastProject\\KoolitusedLastProject\\Views\\Home\\su_Create.cshtml",
+              "RelativeDocumentMoniker": "KoolitusedLastProject\\Views\\Home\\su_Create.cshtml",
+              "ToolTip": "C:\\Users\\aleks\\source\\repos\\tirfall\\KoolitusedLastProject\\KoolitusedLastProject\\Views\\Home\\su_Create.cshtml",
+              "RelativeToolTip": "KoolitusedLastProject\\Views\\Home\\su_Create.cshtml",
+              "ViewState": "AQIAAEYAAAAAAAAAAAAAAEYAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-20T22:38:18.929Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Seminarid.cshtml",
+              "DocumentMoniker": "C:\\Users\\aleks\\source\\repos\\tirfall\\KoolitusedLastProject\\KoolitusedLastProject\\Views\\Home\\Seminarid.cshtml",
+              "RelativeDocumentMoniker": "KoolitusedLastProject\\Views\\Home\\Seminarid.cshtml",
+              "ToolTip": "C:\\Users\\aleks\\source\\repos\\tirfall\\KoolitusedLastProject\\KoolitusedLastProject\\Views\\Home\\Seminarid.cshtml",
+              "RelativeToolTip": "KoolitusedLastProject\\Views\\Home\\Seminarid.cshtml",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAAAsAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-20T22:37:55.72Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "l_Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\aleks\\source\\repos\\tirfall\\KoolitusedLastProject\\KoolitusedLastProject\\Views\\Home\\l_Edit.cshtml",
+              "RelativeDocumentMoniker": "KoolitusedLastProject\\Views\\Home\\l_Edit.cshtml",
+              "ToolTip": "C:\\Users\\aleks\\source\\repos\\tirfall\\KoolitusedLastProject\\KoolitusedLastProject\\Views\\Home\\l_Edit.cshtml",
+              "RelativeToolTip": "KoolitusedLastProject\\Views\\Home\\l_Edit.cshtml",
+              "ViewState": "AQIAAEgAAAAAAAAAAAAAAE4AAABDAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-20T22:37:42.658Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "l_Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\aleks\\source\\repos\\tirfall\\KoolitusedLastProject\\KoolitusedLastProject\\Views\\Home\\l_Create.cshtml",
+              "RelativeDocumentMoniker": "KoolitusedLastProject\\Views\\Home\\l_Create.cshtml",
+              "ToolTip": "C:\\Users\\aleks\\source\\repos\\tirfall\\KoolitusedLastProject\\KoolitusedLastProject\\Views\\Home\\l_Create.cshtml",
+              "RelativeToolTip": "KoolitusedLastProject\\Views\\Home\\l_Create.cshtml",
+              "ViewState": "AQIAADMAAAAAAAAAAAAAADwAAABDAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-20T22:37:27.838Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Laps.cs",
+              "DocumentMoniker": "C:\\Users\\aleks\\source\\repos\\tirfall\\KoolitusedLastProject\\KoolitusedLastProject\\Models\\Laps.cs",
+              "RelativeDocumentMoniker": "KoolitusedLastProject\\Models\\Laps.cs",
+              "ToolTip": "C:\\Users\\aleks\\source\\repos\\tirfall\\KoolitusedLastProject\\KoolitusedLastProject\\Models\\Laps.cs",
+              "RelativeToolTip": "KoolitusedLastProject\\Models\\Laps.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAAABwAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-20T22:37:18.089Z"
             }
           ]
         }

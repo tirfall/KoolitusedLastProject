@@ -183,7 +183,7 @@
     <Compile Include="Models\Laps.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Opetaja.cs" />
-    <Compile Include="Models\Sundmus.cs" />
+    <Compile Include="Models\Seminar.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -257,7 +257,7 @@
     <Content Include="Views\Home\ku_Create.cshtml" />
     <Content Include="Views\Home\ku_Delete.cshtml" />
     <Content Include="Views\Home\ku_Edit.cshtml" />
-    <Content Include="Views\Home\Sundmused.cshtml" />
+    <Content Include="Views\Home\Seminarid.cshtml" />
     <Content Include="Views\Home\su_Create.cshtml" />
     <Content Include="Views\Home\su_Delete.cshtml" />
     <Content Include="Views\Home\su_Edit.cshtml" />
