@@ -1,7 +1,20 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\37256\\source\\repos\\K1\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\aleks\\source\\repos\\KoolitusedLastProject\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7D1F3AB3-CC37-4FC8-9926-5663024DBB64}|KoolitusedLastProject\\KoolitusedLastProject.csproj|c:\\users\\aleks\\source\\repos\\koolitusedlastproject\\koolitusedlastproject\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{7D1F3AB3-CC37-4FC8-9926-5663024DBB64}|KoolitusedLastProject\\KoolitusedLastProject.csproj|solutionrelative:koolitusedlastproject\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D1F3AB3-CC37-4FC8-9926-5663024DBB64}|KoolitusedLastProject\\KoolitusedLastProject.csproj|C:\\Users\\aleks\\source\\repos\\KoolitusedLastProject\\koolitusedlastproject\\web.debug.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{7D1F3AB3-CC37-4FC8-9926-5663024DBB64}|KoolitusedLastProject\\KoolitusedLastProject.csproj|solutionrelative:koolitusedlastproject\\web.debug.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D1F3AB3-CC37-4FC8-9926-5663024DBB64}|KoolitusedLastProject\\KoolitusedLastProject.csproj|C:\\Users\\aleks\\source\\repos\\KoolitusedLastProject\\koolitusedlastproject\\web.release.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{7D1F3AB3-CC37-4FC8-9926-5663024DBB64}|KoolitusedLastProject\\KoolitusedLastProject.csproj|solutionrelative:koolitusedlastproject\\web.release.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 470,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,6 +51,43 @@
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Web.Debug.config",
+              "DocumentMoniker": "C:\\Users\\aleks\\source\\repos\\KoolitusedLastProject\\KoolitusedLastProject\\Web.Debug.config",
+              "RelativeDocumentMoniker": "KoolitusedLastProject\\Web.Debug.config",
+              "ToolTip": "C:\\Users\\aleks\\source\\repos\\KoolitusedLastProject\\KoolitusedLastProject\\Web.Debug.config",
+              "RelativeToolTip": "KoolitusedLastProject\\Web.Debug.config",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-05-20T00:47:06.875Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Web.Release.config",
+              "DocumentMoniker": "C:\\Users\\aleks\\source\\repos\\KoolitusedLastProject\\KoolitusedLastProject\\Web.Release.config",
+              "RelativeDocumentMoniker": "KoolitusedLastProject\\Web.Release.config",
+              "ToolTip": "C:\\Users\\aleks\\source\\repos\\KoolitusedLastProject\\KoolitusedLastProject\\Web.Release.config",
+              "RelativeToolTip": "KoolitusedLastProject\\Web.Release.config",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-05-20T00:47:05.478Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Web.config",
+              "DocumentMoniker": "C:\\Users\\aleks\\source\\repos\\KoolitusedLastProject\\KoolitusedLastProject\\Web.config",
+              "RelativeDocumentMoniker": "KoolitusedLastProject\\Web.config",
+              "ToolTip": "C:\\Users\\aleks\\source\\repos\\KoolitusedLastProject\\KoolitusedLastProject\\Web.config",
+              "RelativeToolTip": "KoolitusedLastProject\\Web.config",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-05-20T00:45:49.174Z",
+              "EditorCaption": ""
             }
           ]
         }
